@@ -1,0 +1,174 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #221F22;
+  }
+
+.header {
+    display: flex;
+    padding-top: 20px;
+    letter-spacing: 1px;
+    font-size: 50px;
+    font-weight: 900;
+    align-items: center;
+    justify-content: center;
+    color: #FCC700;
+    display: grid;
+}
+
+
+#game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    background: #F0F3F4;
+}
+
+.grid-cell {
+    border: 1px solid #000;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+
+}
+
+.grid-cell:not(.disabled):hover {
+    background: rgba(11, 180, 241, 0.323);
+
+    
+}
+
+.grid-cell:nth-child(-n + 3) {
+    border-top: none;
+}
+
+.grid-cell:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.grid-cell:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.grid-cell:nth-last-of-type(-n + 3) {
+    border-bottom: none;
+}
+
+.disabled {
+    cursor: not-allowed;
+}
+
+.x::after {
+    content: '❌';
+}
+
+.o::after {
+    content: '⭕';
+}
+
+.game-over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgb(0 0 0 / 50%) 0 0 0 9999px;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+
+.game-over-text {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -200px;
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+    font-family: 'Poppins', sans-serif;
+}
+
+.visible {
+    display: block;
+}
+
+
+
+.restart-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.restart {
+    padding-top: 20px;
+    outline: none;
+    border: none;
+    width: 105px;
+    color: #fff;
+    padding: 8px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #17A589;
+    transition: transform 0.3s ease; 
+
+
+}
+
+
+.footer {
+    display: flex;
+    padding-top: 785px;
+    padding-left: 590px;
+    letter-spacing: 1px;
+    font-size: 10px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: left;
+    color: #F0F3F4;
+    display: grid;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+@media (max-width: 745px) {
+    .grid-cell {
+        border: 1px solid #000;
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+    }
+
+    .header {
+        padding-top: 100px;
+    }
+    .footer {
+        padding-top: 530px;
+        padding-left: 30px;
+    }
+}

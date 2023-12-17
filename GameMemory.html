@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- By Ali Aslan -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Memory 🧠 Game in JavaScript</title>
+
+        <link rel="stylesheet" href="Game/MemoryGame.css" />
+        <script src="Game/MemoryGame.js" defer></script>
+    </head>
+    <body>
+        <div id="msgArea" class="msg"><p class="msgText"></p></div>
+
+        <div class="game">
+            <div class="controls">
+                <button id="btn" class="">Start</button>
+                <div class="stats">
+                    <div class="moves">0 moves</div>
+                    <div class="timer">time: 0 sec</div>
+                </div>
+            </div>
+            <div class="board-container">
+                <div class="board" data-dimension="4"></div>
+                <div class="win">You won!</div>
+            </div>
+            <button id="btn" onclick="window.location.href='Game_Menu.html';" class="">Back to Game Menu </button>
+            <div class="footer"><a target="_blank" href="home.html">Back to D Hub E-Learning</a></div>
+        </div>
+      
+    </body>
+</html>
