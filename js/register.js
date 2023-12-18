@@ -1,7 +1,7 @@
 window.onload = pageLoad;
 var user = 
    {
-       name:'',
+       username:'',
        email:'',
        password:'',
        r_password:''
